@@ -1,0 +1,927 @@
+{
+  "data": {
+    "rows": 119390,
+    "cancel_rate": 0.37041628277075134,
+    "exact_duplicate_rows": 31994,
+    "cancel_before_booking": 0,
+    "cancel_after_arrival": 0,
+    "arrival_min": "2015-07-01",
+    "arrival_max": "2017-08-31",
+    "earliest_booking": "2013-06-24",
+    "split_rows": {
+      "train": 58792,
+      "test": 32829,
+      "val": 27769
+    }
+  },
+  "models": {
+    "channel_lookup": {
+      "val": {
+        "auc": 0.7536544237902767,
+        "log_loss": 0.5096823224879471,
+        "brier": 0.1726100053069612,
+        "ece": 0.053440379624748846,
+        "mean_pred": 0.3496052176799376,
+        "observed": 0.3665598329071987,
+        "n": 27769
+      },
+      "test": {
+        "auc": 0.7144890226672479,
+        "log_loss": 0.5540744822879368,
+        "brier": 0.1919206413220077,
+        "ece": 0.1303256816188975,
+        "mean_pred": 0.3565354051694376,
+        "observed": 0.4001340278412379,
+        "n": 32829
+      },
+      "selection": {
+        "val_loss": 0.5096823224879471,
+        "gap_to_best": 0.04155234901497479,
+        "se": 0.006287107940130571,
+        "within_one_se": false
+      }
+    },
+    "rule_trees": {
+      "val": {
+        "auc": 0.8237103907145662,
+        "log_loss": 0.5271943415232406,
+        "brier": 0.17147440339837874,
+        "ece": 0.13942851413208515,
+        "mean_pred": 0.4076562962685482,
+        "observed": 0.3665598329071987,
+        "n": 27769
+      },
+      "test": {
+        "auc": 0.8276667391042021,
+        "log_loss": 0.5442750164399193,
+        "brier": 0.17999160649591012,
+        "ece": 0.17605431835394567,
+        "mean_pred": 0.4284646715688101,
+        "observed": 0.4001340278412379,
+        "n": 32829
+      },
+      "selection": {
+        "val_loss": 0.5271943415232406,
+        "gap_to_best": 0.05906436805026832,
+        "se": 0.0083145592744037,
+        "within_one_se": false
+      }
+    },
+    "logistic": {
+      "val": {
+        "auc": 0.8444478401703314,
+        "log_loss": 0.4681299734729723,
+        "brier": 0.15702992723511436,
+        "ece": 0.06948316784389968,
+        "mean_pred": 0.29736203265527467,
+        "observed": 0.3665598329071987,
+        "n": 27769
+      },
+      "test": {
+        "auc": 0.8363253549320685,
+        "log_loss": 0.4750994730909151,
+        "brier": 0.1620865339951615,
+        "ece": 0.05431952027758203,
+        "mean_pred": 0.35657364008073383,
+        "observed": 0.4001340278412379,
+        "n": 32829
+      },
+      "selection": {
+        "val_loss": 0.4681299734729723,
+        "gap_to_best": 0.0,
+        "se": 0.0,
+        "within_one_se": true
+      }
+    },
+    "boosting_small": {
+      "val": {
+        "auc": 0.8318685439669149,
+        "log_loss": 0.5800111875270196,
+        "brier": 0.17942492619033154,
+        "ece": 0.14074573433040632,
+        "mean_pred": 0.22581409857679233,
+        "observed": 0.3665598329071987,
+        "n": 27769
+      },
+      "test": {
+        "auc": 0.8617268582949245,
+        "log_loss": 0.42921174668042006,
+        "brier": 0.14788102690159444,
+        "ece": 0.04926124469200063,
+        "mean_pred": 0.356316777286787,
+        "observed": 0.4001340278412379,
+        "n": 32829
+      },
+      "selection": {
+        "val_loss": 0.5800111875270196,
+        "gap_to_best": 0.11188121405404733,
+        "se": 0.022048692019727586,
+        "within_one_se": false
+      }
+    },
+    "boosting_large": {
+      "val": {
+        "auc": 0.8153519008050384,
+        "log_loss": 0.7081586907157605,
+        "brier": 0.19157616337093822,
+        "ece": 0.16057915676213128,
+        "mean_pred": 0.20598067614506743,
+        "observed": 0.3665598329071987,
+        "n": 27769
+      },
+      "test": {
+        "auc": 0.8545789508727544,
+        "log_loss": 0.4499345222919387,
+        "brier": 0.15381122021950633,
+        "ece": 0.05080434962230433,
+        "mean_pred": 0.3499229485399743,
+        "observed": 0.4001340278412379,
+        "n": 32829
+      },
+      "selection": {
+        "val_loss": 0.7081586907157605,
+        "gap_to_best": 0.24002871724278824,
+        "se": 0.03193279005054186,
+        "within_one_se": false
+      }
+    }
+  },
+  "shipped": "logistic",
+  "shipped_test": {
+    "auc": 0.8363253549320685,
+    "log_loss": 0.4750994730909151,
+    "brier": 0.1620865339951615,
+    "ece": 0.05431952027758203,
+    "mean_pred": 0.35657364008073383,
+    "observed": 0.4001340278412379,
+    "n": 32829,
+    "auc_ci": [
+      0.8169187954518418,
+      0.8556527721975816
+    ],
+    "log_loss_ci": [
+      0.4509392199697545,
+      0.5003819392737625
+    ]
+  },
+  "best_on_test_in_hindsight": "boosting_small",
+  "calibration": {
+    "val_second_half_ece_raw": 0.06770286449685789,
+    "val_second_half_ece_isotonic": 0.035080753009311294,
+    "ship_isotonic": true,
+    "test_ece_raw": 0.06487201591277246,
+    "test_ece_isotonic": 0.027567146793834575
+  },
+  "leakage_audit": {
+    "booking_time_only": {
+      "auc": 0.8318685439669149,
+      "log_loss": 0.5800111875270196,
+      "brier": 0.17942492619033154,
+      "ece": 0.14074573433040632,
+      "mean_pred": 0.22581409857679233,
+      "observed": 0.3665598329071987,
+      "n": 27769
+    },
+    "plus_booking_changes": {
+      "auc": 0.8441090662474284,
+      "log_loss": 0.5523838971577771,
+      "brier": 0.17442957853335697,
+      "ece": 0.1361700583883736,
+      "mean_pred": 0.23038977451882509,
+      "observed": 0.3665598329071987,
+      "n": 27769
+    },
+    "plus_special_requests": {
+      "auc": 0.8566489541583149,
+      "log_loss": 0.5460540394843094,
+      "brier": 0.17278918531399734,
+      "ece": 0.13970108549958962,
+      "mean_pred": 0.22685874740760906,
+      "observed": 0.3665598329071987,
+      "n": 27769
+    },
+    "plus_parking_request": {
+      "auc": 0.8560201444736153,
+      "log_loss": 0.5351996202022639,
+      "brier": 0.17231366544119375,
+      "ece": 0.13611101989417046,
+      "mean_pred": 0.230896601150311,
+      "observed": 0.3665598329071987,
+      "n": 27769
+    },
+    "plus_room_reassigned": {
+      "auc": 0.8520730152554661,
+      "log_loss": 0.5370396018182343,
+      "brier": 0.1707739886870237,
+      "ece": 0.13177680095799588,
+      "mean_pred": 0.2347830319492028,
+      "observed": 0.3665598329071987,
+      "n": 27769
+    },
+    "plus_status_text": {
+      "auc": 1.0,
+      "log_loss": 2.001968251127125e-05,
+      "brier": 1.334857176744868e-09,
+      "ece": 1.8670816061885587e-05,
+      "mean_pred": 0.3665482220649062,
+      "observed": 0.3665598329071987,
+      "n": 27769
+    },
+    "plus_everything_after_booking": {
+      "auc": 1.0,
+      "log_loss": 1.4279529833959804e-05,
+      "brier": 5.945495587973147e-10,
+      "ece": 1.2961455875953933e-05,
+      "mean_pred": 0.36655306906831325,
+      "observed": 0.3665598329071987,
+      "n": 27769
+    },
+    "without_price": {
+      "auc": 0.8448108812461599,
+      "log_loss": 0.5546208808647441,
+      "brier": 0.17614068911586409,
+      "ece": 0.137721829920417,
+      "mean_pred": 0.22883800298678164,
+      "observed": 0.3665598329071987,
+      "n": 27769
+    },
+    "without_deposit_type": {
+      "auc": 0.838138235197693,
+      "log_loss": 0.5440026659793304,
+      "brier": 0.1739396945212409,
+      "ece": 0.13173386229691778,
+      "mean_pred": 0.23482597061028093,
+      "observed": 0.3665598329071987,
+      "n": 27769
+    },
+    "without_agent_and_country": {
+      "auc": 0.7951531625964592,
+      "log_loss": 0.5140143015050664,
+      "brier": 0.1723473425860886,
+      "ece": 0.08862209265619272,
+      "mean_pred": 0.2779377402510059,
+      "observed": 0.3665598329071987,
+      "n": 27769
+    }
+  },
+  "validation_design": {
+    "random_rows": {
+      "auc": 0.9138266074610337,
+      "log_loss": 0.34671203008813045,
+      "brier": 0.11457792281717735,
+      "ece": 0.025147993716614418,
+      "mean_pred": 0.37289602197462207,
+      "observed": 0.37577057089252214,
+      "n": 29848
+    },
+    "random_rows_deduplicated": {
+      "auc": 0.8571079990008793,
+      "log_loss": 0.4042060003739146,
+      "brier": 0.13416970799758182,
+      "ece": 0.017288328157110438,
+      "mean_pred": 0.27251675049926843,
+      "observed": 0.27786168703373154,
+      "n": 21849
+    },
+    "forward_in_time_test_auc": 0.8363253549320685,
+    "duplicate_share": 0.26797889270458164
+  },
+  "segments": {
+    "hotel": [
+      {
+        "hotel": "City Hotel",
+        "n": 22542,
+        "observed": 0.4292,
+        "predicted": 0.4086
+      },
+      {
+        "hotel": "Resort Hotel",
+        "n": 10287,
+        "observed": 0.3363,
+        "predicted": 0.2425
+      }
+    ],
+    "market_segment": [
+      {
+        "market_segment": "Aviation",
+        "n": 103,
+        "observed": 0.2039,
+        "predicted": 0.1734
+      },
+      {
+        "market_segment": "Complementary",
+        "n": 171,
+        "observed": 0.1579,
+        "predicted": 0.1071
+      },
+      {
+        "market_segment": "Corporate",
+        "n": 1027,
+        "observed": 0.2337,
+        "predicted": 0.1851
+      },
+      {
+        "market_segment": "Direct",
+        "n": 3549,
+        "observed": 0.1691,
+        "predicted": 0.1453
+      },
+      {
+        "market_segment": "Groups",
+        "n": 4437,
+        "observed": 0.6056,
+        "predicted": 0.6382
+      },
+      {
+        "market_segment": "Offline TA/TO",
+        "n": 5010,
+        "observed": 0.3533,
+        "predicted": 0.324
+      },
+      {
+        "market_segment": "Online TA",
+        "n": 18532,
+        "observed": 0.4204,
+        "predicted": 0.3512
+      }
+    ],
+    "deposit_type": [
+      {
+        "deposit_type": "No Deposit",
+        "n": 29425,
+        "observed": 0.3308,
+        "predicted": 0.2835
+      },
+      {
+        "deposit_type": "Non Refund",
+        "n": 3377,
+        "observed": 0.9997,
+        "predicted": 0.9934
+      },
+      {
+        "deposit_type": "Refundable",
+        "n": 27,
+        "observed": 0.963,
+        "predicted": 0.3858
+      }
+    ],
+    "top_agents": [
+      {
+        "agent": 7.0,
+        "n": 1096,
+        "observed": 0.1259,
+        "predicted": 0.1342
+      },
+      {
+        "agent": 9.0,
+        "n": 11008,
+        "observed": 0.4581,
+        "predicted": 0.411
+      },
+      {
+        "agent": 14.0,
+        "n": 1406,
+        "observed": 0.1629,
+        "predicted": 0.1566
+      },
+      {
+        "agent": 240.0,
+        "n": 3928,
+        "observed": 0.4941,
+        "predicted": 0.3262
+      },
+      {
+        "agent": 250.0,
+        "n": 942,
+        "observed": 0.2091,
+        "predicted": 0.1732
+      }
+    ]
+  },
+  "drift": {
+    "agent9_cancel_rate_by_quarter": {
+      "2015Q3": 0.2813,
+      "2015Q4": 0.2641,
+      "2016Q1": 0.3642,
+      "2016Q2": 0.374,
+      "2016Q3": 0.3901,
+      "2016Q4": 0.4677,
+      "2017Q1": 0.44,
+      "2017Q2": 0.4644,
+      "2017Q3": 0.4597
+    },
+    "agent9_bookings_by_quarter": {
+      "2015Q3": 1166,
+      "2015Q4": 1151,
+      "2016Q1": 2696,
+      "2016Q2": 4235,
+      "2016Q3": 5201,
+      "2016Q4": 4238,
+      "2017Q1": 3757,
+      "2017Q2": 5706,
+      "2017Q3": 3811
+    },
+    "agent9_share_of_test": 0.33531329007889366,
+    "agent9_test_observed": 0.45812136627906974,
+    "agent9_test_predicted_static": 0.3761962423260455
+  },
+  "delayed_labels": {
+    "rows": 32718,
+    "table": [
+      {
+        "method": "static, trained once on train",
+        "auc": 0.83032,
+        "log_loss": 0.48894,
+        "brier": 0.16717,
+        "ece": 0.06449,
+        "mean_pred": 0.33951,
+        "observed": 0.3981,
+        "n": 32718,
+        "loss_lo": 0.46466,
+        "loss_hi": 0.51371
+      },
+      {
+        "method": "static boosting, trained once on train",
+        "auc": 0.84291,
+        "log_loss": 0.46139,
+        "brier": 0.15794,
+        "ece": 0.05794,
+        "mean_pred": 0.342,
+        "observed": 0.3981,
+        "n": 32718,
+        "loss_lo": 0.44033,
+        "loss_hi": 0.48169
+      },
+      {
+        "method": "monthly refit, final labels (peeks)",
+        "auc": 0.87203,
+        "log_loss": 0.41537,
+        "brier": 0.14138,
+        "ece": 0.03307,
+        "mean_pred": 0.37307,
+        "observed": 0.3981,
+        "n": 32718,
+        "loss_lo": 0.39584,
+        "loss_hi": 0.4334
+      },
+      {
+        "method": "monthly refit, matured labels",
+        "auc": 0.85511,
+        "log_loss": 0.44023,
+        "brier": 0.14927,
+        "ece": 0.02992,
+        "mean_pred": 0.42062,
+        "observed": 0.3981,
+        "n": 32718,
+        "loss_lo": 0.41927,
+        "loss_hi": 0.45882
+      },
+      {
+        "method": "monthly refit, pending as no-cancel",
+        "auc": 0.85292,
+        "log_loss": 0.46915,
+        "brier": 0.16113,
+        "ece": 0.09055,
+        "mean_pred": 0.30918,
+        "observed": 0.3981,
+        "n": 32718,
+        "loss_lo": 0.4476,
+        "loss_hi": 0.49044
+      },
+      {
+        "method": "logistic monthly refit, matured labels",
+        "auc": 0.82708,
+        "log_loss": 0.4838,
+        "brier": 0.16427,
+        "ece": 0.03594,
+        "mean_pred": 0.4166,
+        "observed": 0.3981,
+        "n": 32718,
+        "loss_lo": 0.45596,
+        "loss_hi": 0.50998
+      },
+      {
+        "method": "streaming logistic (river)",
+        "auc": 0.74168,
+        "log_loss": 0.60368,
+        "brier": 0.20574,
+        "ece": 0.09032,
+        "mean_pred": 0.41893,
+        "observed": 0.3981,
+        "n": 32718,
+        "loss_lo": 0.57824,
+        "loss_hi": 0.63051
+      }
+    ],
+    "drift_alarms": {
+      "agent_9": [
+        "2015-08-08",
+        "2015-12-21",
+        "2016-01-19",
+        "2016-03-18",
+        "2016-08-21",
+        "2016-10-18",
+        "2016-12-23",
+        "2017-01-12",
+        "2017-03-01",
+        "2017-04-16",
+        "2017-05-02",
+        "2017-05-26",
+        "2017-08-13"
+      ],
+      "all_other_bookings": [
+        "2015-07-03",
+        "2015-07-06",
+        "2015-07-08",
+        "2015-07-19",
+        "2015-07-23",
+        "2015-07-24",
+        "2015-08-09",
+        "2015-08-16",
+        "2015-08-27",
+        "2015-08-31",
+        "2015-09-09",
+        "2015-09-12",
+        "2015-09-15",
+        "2015-09-20",
+        "2015-09-28",
+        "2015-10-07",
+        "2015-10-21",
+        "2015-10-21",
+        "2015-10-22",
+        "2015-10-31",
+        "2015-11-04",
+        "2015-11-11",
+        "2015-11-16",
+        "2015-11-19",
+        "2015-11-22",
+        "2015-11-24",
+        "2015-12-02",
+        "2015-12-06",
+        "2015-12-09",
+        "2015-12-18",
+        "2015-12-20",
+        "2016-01-01",
+        "2016-01-05",
+        "2016-01-10",
+        "2016-01-18",
+        "2016-01-20",
+        "2016-01-31",
+        "2016-02-07",
+        "2016-02-09",
+        "2016-02-09",
+        "2016-02-11",
+        "2016-02-23",
+        "2016-02-29",
+        "2016-03-04",
+        "2016-03-14",
+        "2016-03-17",
+        "2016-03-19",
+        "2016-03-29",
+        "2016-04-04",
+        "2016-04-04",
+        "2016-04-12",
+        "2016-04-22",
+        "2016-04-27",
+        "2016-04-28",
+        "2016-05-03",
+        "2016-05-08",
+        "2016-05-16",
+        "2016-06-02",
+        "2016-06-05",
+        "2016-06-15",
+        "2016-06-20",
+        "2016-07-13",
+        "2016-08-01",
+        "2016-09-06",
+        "2016-09-09",
+        "2016-09-20",
+        "2016-09-20",
+        "2016-09-28",
+        "2016-10-18",
+        "2016-10-21",
+        "2016-10-23",
+        "2016-11-21",
+        "2016-11-23",
+        "2016-11-25",
+        "2016-11-26",
+        "2016-12-07",
+        "2016-12-08",
+        "2016-12-11",
+        "2016-12-17",
+        "2016-12-29",
+        "2017-01-04",
+        "2017-01-11",
+        "2017-01-15",
+        "2017-01-19",
+        "2017-01-21",
+        "2017-01-24",
+        "2017-01-26",
+        "2017-01-31",
+        "2017-02-05",
+        "2017-02-12",
+        "2017-03-18",
+        "2017-04-17",
+        "2017-04-21",
+        "2017-04-30",
+        "2017-05-05",
+        "2017-05-13",
+        "2017-05-23",
+        "2017-06-06",
+        "2017-06-29",
+        "2017-07-05",
+        "2017-08-27"
+      ]
+    }
+  },
+  "economics": {
+    "walk_1x": {
+      "capacity": {
+        "City Hotel": 98,
+        "Resort Hotel": 49
+      },
+      "knobs": {
+        "flat": 1.0,
+        "model": 1.35
+      },
+      "table": {
+        "no overbooking": {
+          "profit": 6873146.0,
+          "walked": 0.0,
+          "accepted": 25458.0,
+          "shows": 14688.0
+        },
+        "flat 10% rule of thumb": {
+          "profit": 7308686.0,
+          "walked": 4.0,
+          "accepted": 27162.0,
+          "shows": 15849.0
+        },
+        "flat overbooking": {
+          "profit": 8413104.0,
+          "walked": 335.0,
+          "accepted": 32366.0,
+          "shows": 19355.0
+        },
+        "model overbooking": {
+          "profit": 8491866.0,
+          "walked": 269.0,
+          "accepted": 32606.0,
+          "shows": 19514.0
+        },
+        "perfect foresight": {
+          "profit": 8519250.0,
+          "walked": 0.0,
+          "accepted": 32308.0,
+          "shows": 19248.0
+        }
+      },
+      "model_vs_flat": [
+        78761.54000000001,
+        13375.66049999999,
+        162069.56575
+      ],
+      "model_vs_none": [
+        1618720.1099999999,
+        1391615.8262499997,
+        1852858.1775
+      ],
+      "flat_vs_none": [
+        1539958.57,
+        1308734.0052500002,
+        1757741.744
+      ],
+      "share_of_foresight_gap_closed": 0.7420152952401909,
+      "alt_model_profit": 8487943.82
+    },
+    "walk_3x": {
+      "capacity": {
+        "City Hotel": 98,
+        "Resort Hotel": 49
+      },
+      "knobs": {
+        "flat": 1.0,
+        "model": 1.1
+      },
+      "table": {
+        "no overbooking": {
+          "profit": 6873146.0,
+          "walked": 0.0,
+          "accepted": 25458.0,
+          "shows": 14688.0
+        },
+        "flat 10% rule of thumb": {
+          "profit": 7308325.0,
+          "walked": 4.0,
+          "accepted": 27162.0,
+          "shows": 15849.0
+        },
+        "flat overbooking": {
+          "profit": 8350363.0,
+          "walked": 335.0,
+          "accepted": 32366.0,
+          "shows": 19355.0
+        },
+        "model overbooking": {
+          "profit": 8432277.0,
+          "walked": 114.0,
+          "accepted": 32244.0,
+          "shows": 19215.0
+        },
+        "perfect foresight": {
+          "profit": 8519250.0,
+          "walked": 0.0,
+          "accepted": 32308.0,
+          "shows": 19248.0
+        }
+      },
+      "model_vs_flat": [
+        81913.21000000002,
+        8376.308750000011,
+        175178.09600000002
+      ],
+      "model_vs_none": [
+        1559130.8199999998,
+        1331399.0684999998,
+        1786386.1804999998
+      ],
+      "flat_vs_none": [
+        1477217.61,
+        1247239.7,
+        1696061.1622499998
+      ],
+      "share_of_foresight_gap_closed": 0.4850195752884711,
+      "alt_model_profit": 8454256.379999999
+    },
+    "walk_5x": {
+      "capacity": {
+        "City Hotel": 98,
+        "Resort Hotel": 49
+      },
+      "knobs": {
+        "flat": 0.8,
+        "model": 1.1
+      },
+      "table": {
+        "no overbooking": {
+          "profit": 6873146.0,
+          "walked": 0.0,
+          "accepted": 25458.0,
+          "shows": 14688.0
+        },
+        "flat 10% rule of thumb": {
+          "profit": 7307964.0,
+          "walked": 4.0,
+          "accepted": 27162.0,
+          "shows": 15849.0
+        },
+        "flat overbooking": {
+          "profit": 8284510.0,
+          "walked": 249.0,
+          "accepted": 32026.0,
+          "shows": 19114.0
+        },
+        "model overbooking": {
+          "profit": 8406566.0,
+          "walked": 114.0,
+          "accepted": 32244.0,
+          "shows": 19215.0
+        },
+        "perfect foresight": {
+          "profit": 8519250.0,
+          "walked": 0.0,
+          "accepted": 32308.0,
+          "shows": 19248.0
+        }
+      },
+      "model_vs_flat": [
+        122056.6,
+        28600.35774999999,
+        234336.837
+      ],
+      "model_vs_none": [
+        1533420.64,
+        1304242.4164999998,
+        1762009.7215
+      ],
+      "flat_vs_none": [
+        1411364.04,
+        1178049.8717499997,
+        1640463.17025
+      ],
+      "share_of_foresight_gap_closed": 0.5199651341865628,
+      "alt_model_profit": 8417273.6
+    }
+  },
+  "capacity_sweep": [
+    {
+      "capacity_quantile": 0.4,
+      "city_rooms": 72,
+      "resort_rooms": 40,
+      "flat_knob": 1.0,
+      "model_knob": 1.1,
+      "none": 5572815.93,
+      "flat": 7518442.42,
+      "model": 7794426.139999999,
+      "foresight": 8115353.05
+    },
+    {
+      "capacity_quantile": 0.5,
+      "city_rooms": 84,
+      "resort_rooms": 44,
+      "flat_knob": 1.0,
+      "model_knob": 1.1,
+      "none": 6196137.199999999,
+      "flat": 8026380.98,
+      "model": 8182821.629999999,
+      "foresight": 8378543.890000001
+    },
+    {
+      "capacity_quantile": 0.6,
+      "city_rooms": 98,
+      "resort_rooms": 49,
+      "flat_knob": 1.0,
+      "model_knob": 1.1,
+      "none": 6873145.699999999,
+      "flat": 8350363.3100000005,
+      "model": 8432276.52,
+      "foresight": 8519249.71
+    },
+    {
+      "capacity_quantile": 0.7,
+      "city_rooms": 111,
+      "resort_rooms": 54,
+      "flat_knob": 1.0,
+      "model_knob": 1.2,
+      "none": 7375361.16,
+      "flat": 8486466.600000001,
+      "model": 8551574.59,
+      "foresight": 8572165.33
+    },
+    {
+      "capacity_quantile": 0.8,
+      "city_rooms": 127,
+      "resort_rooms": 63,
+      "flat_knob": 1.0,
+      "model_knob": 1.2,
+      "none": 7862794.25,
+      "flat": 8560493.0,
+      "model": 8586773.19,
+      "foresight": 8596518.71
+    }
+  ],
+  "final_test": {
+    "auc": 0.8351001109262255,
+    "log_loss": 0.4674347060757738,
+    "brier": 0.15912542241334773,
+    "ece": 0.03535792025539994,
+    "mean_pred": 0.4285112356006915,
+    "observed": 0.4001340278412379,
+    "n": 32829,
+    "calibrated": true,
+    "log_loss_ci": [
+      0.4458426578275652,
+      0.4900959268466193
+    ],
+    "auc_ci": [
+      0.8156754143243803,
+      0.8542858963933366
+    ]
+  },
+  "examples": [
+    {
+      "probability": 0.9989543394911119,
+      "observed": 1,
+      "up": [
+        "deposit terms (Non Refund)",
+        "guest country (PRT)",
+        "customer type (Transient)"
+      ],
+      "down": []
+    },
+    {
+      "probability": 0.39622641509433965,
+      "observed": 1,
+      "up": [
+        "number of adults (3)",
+        "booking agent (9)"
+      ],
+      "down": [
+        "deposit terms (No Deposit)"
+      ]
+    },
+    {
+      "probability": 0.018290406868234417,
+      "observed": 0,
+      "up": [
+        "customer type (Transient)"
+      ],
+      "down": [
+        "deposit terms (No Deposit)",
+        "booking agent (152)"
+      ]
+    }
+  ],
+  "rule_text": "FIGSClassifier\n  FIGS: a sum of small trees.\n  depth 6  \u00b7  13 leaves  \u00b7  58,792 training samples  \u00b7  classes: 0, 1\n  Each tree adds the value of the leaf a sample reaches; P(1) = sigmoid(sum).\n\n  deposit_type_Non Refund \u2264 0.5 ?                       58,792 samples\n  \u251c\u2500 yes previous_cancellations \u2264 0.9223 ?              50,757\n  \u2502  \u251c\u2500 yes country_PRT \u2264 0.5 ?                         48,331\n  \u2502  \u2502  \u251c\u2500 yes agent_id_9 \u2264 0.5 ?                       29,607\n  \u2502  \u2502  \u2502  \u251c\u2500 yes adr \u2264 1.746 ?                         19,086\n  \u2502  \u2502  \u2502  \u2502  \u251c\u2500 yes agent_id_17 \u2264 0.5 ?                17,621\n  \u2502  \u2502  \u2502  \u2502  \u2502  \u251c\u2500 yes \u2192 -0.9477                       17,414\n  \u2502  \u2502  \u2502  \u2502  \u2502  \u2514\u2500 no  \u2192 +0.1111                          207\n  \u2502  \u2502  \u2502  \u2502  \u2514\u2500 no  \u2192 -0.4594                           1,465\n  \u2502  \u2502  \u2502  \u2514\u2500 no  customer_type_Transient \u2264 0.5 ?       10,521\n  \u2502  \u2502  \u2502     \u251c\u2500 yes \u2192 -0.8522                           1,854\n  \u2502  \u2502  \u2502     \u2514\u2500 no  lead_time \u2264 -0.8868 ?               8,667\n  \u2502  \u2502  \u2502        \u251c\u2500 yes \u2192 -0.6739                        1,331\n  \u2502  \u2502  \u2502        \u2514\u2500 no  \u2192 -0.07552                       7,336\n  \u2502  \u2502  \u2514\u2500 no  lead_time \u2264 -0.7732 ?                    18,724\n  \u2502  \u2502     \u251c\u2500 yes agent_id_134 \u2264 0.5 ?                   7,672\n  \u2502  \u2502     \u2502  \u251c\u2500 yes \u2192 -0.707                            7,603\n  \u2502  \u2502     \u2502  \u2514\u2500 no  \u2192 +0.971                               69\n  \u2502  \u2502     \u2514\u2500 no  agent_id_240 \u2264 0.5 ?                  11,052\n  \u2502  \u2502        \u251c\u2500 yes \u2192 -0.2443                           8,805\n  \u2502  \u2502        \u2514\u2500 no  \u2192 +0.3574                           2,247\n  \u2502  \u2514\u2500 no  previous_bookings_not_canceled \u2264 0.6077 ?    2,426\n  \u2502     \u251c\u2500 yes \u2192 +0.9852                                 2,169\n  \u2502     \u2514\u2500 no  \u2192 -0.5409                                   257\n  \u2514\u2500 no  \u2192 +0.9793                                       8,035",
+  "runtime_seconds": 515.6
+}
