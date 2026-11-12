@@ -1,0 +1,46 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ghostroom"
+version = "0.1.0"
+description = "Hotel booking cancellation scores with delayed-label retraining and an overbooking simulator"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "Ranjith Guggilla", email = "ranjithguggilla668@gmail.com" }]
+dependencies = [
+  "numpy>=2.0",
+  "pandas>=3.0",
+  "scikit-learn>=1.5",
+  "lightgbm>=4.5",
+  "imodels>=2.0",
+  "river>=0.22",
+  "scipy>=1.13",
+  "matplotlib>=3.9",
+  "joblib>=1.4",
+  "gradio>=5",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "pytest-cov>=5", "ruff>=0.6"]
+
+[project.scripts]
+ghostroom = "ghostroom.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 150
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
+ignore = ["E731", "B023", "B905"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = "-q"

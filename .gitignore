@@ -1,0 +1,10 @@
+__pycache__/
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.coverage
+data/*.csv
+outputs/*.joblib
+outputs/cache/
+publish.sh
+*.docx
