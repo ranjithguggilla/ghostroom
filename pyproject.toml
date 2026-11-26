@@ -7,7 +7,7 @@ name = "ghostroom"
 version = "0.1.0"
 description = "Hotel booking cancellation scores with delayed-label retraining and an overbooking simulator"
 readme = "README.md"
-requires-python = ">=3.11"
+requires-python = ">=3.12"
 license = { text = "MIT" }
 authors = [{ name = "Ranjith Guggilla", email = "ranjithguggilla668@gmail.com" }]
 dependencies = [

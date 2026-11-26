@@ -197,7 +197,7 @@ FIGSClassifier
 
 ## Installation
 
-Python 3.11 or newer. From a clone of this repository:
+Python 3.12 or newer. From a clone of this repository:
 
 ```
 python -m venv .venv
